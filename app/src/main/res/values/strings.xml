@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FamTrac</string>
+    <string name="in_case_of_emergency_keep_telling_my_family_members_to_contact_me">In Case Of emergency keep telling my family members to contact me</string>
+    <string name="guard">Guard</string>
+    <string name="sos">SOS</string>
+    <string name="travelling_at_an_unknown_place_click_here_when_you_are_on_a_potentially_dangerous_journey">Travelling at an unknown place? Click here when you are on a potentially dangerous journey</string>
+    <string name="security">Security</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="profile">Profile</string>
+    <string name="home">Home</string>
+    <string name="my_family">My Family</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
