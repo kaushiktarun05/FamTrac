@@ -24,7 +24,9 @@ class HomeFragment : Fragment() {
         val listMembers = listOf<MemberModel>(
             MemberModel("Tarun"),
             MemberModel("kaushik"),
-            MemberModel("NFSU")
+            MemberModel("NFSU"),
+            MemberModel("Papa"),
+            MemberModel("Mummy")
 
         )
 
