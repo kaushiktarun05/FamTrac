@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class HomeFragment : Fragment() {
 
@@ -27,6 +29,9 @@ class HomeFragment : Fragment() {
         )
 
         val adapter = MemberAdapter(listMembers)
+        val recycler = requireView().findViewById<RecyclerView>(R.id.recycler_member)
+        recycler.layoutManager = LinearLayoutManager(requireContext())
+        recycler.adapter = adapter
 
     }
 
