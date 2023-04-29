@@ -10,9 +10,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.util.concurrent.ConcurrentNavigableMap
 
 class HomeFragment : Fragment() {
+
+    private val listContacts:ArrayList<ContactModel> = ArrayList()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,12 +45,16 @@ class HomeFragment : Fragment() {
         val recycler = requireView().findViewById<RecyclerView>(R.id.recycler_member)
         recycler.layoutManager = LinearLayoutManager(requireContext())
         recycler.adapter = adapter
+        val inviteAdapter = InviteAdapter(listContacts)
+        CoroutineScope(Dispatchers.IO).launch{
 
-        fetchContacts()
+            listContacts.addAll(fetchContacts())
 
-        Log.d("FetchContacts89","fetchContacts: gonna start fetching")
-        val inviteAdapter = InviteAdapter(fetchContacts())
-        Log.d("FetchContact89","fetchContacts: fetching ended")
+            withContext(Dispatchers.Main) {
+                inviteAdapter.notifyDataSetChanged()
+            }
+        }
+
         val inviteRecycler = requireView().findViewById<RecyclerView>(R.id.recycler_invite)
         inviteRecycler.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
         inviteRecycler.adapter = inviteAdapter
