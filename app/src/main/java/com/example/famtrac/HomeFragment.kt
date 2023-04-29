@@ -21,7 +21,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val listMembers = listOf<MemberModel>(
+        val listMembers = listOf(
             MemberModel("Tarun", "C-211 Noida", "79", "223M"),
             MemberModel("kaushik", "Sector 3, Rohini, Delhi", "82", "42KM"),
             MemberModel("NFSU","NFSU, DC,New Delhi","88","21.81KM"),
