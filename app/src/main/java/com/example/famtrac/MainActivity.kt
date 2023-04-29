@@ -79,11 +79,8 @@ class MainActivity : AppCompatActivity() {
         if (requestCode == permissionCode) {
 
             if (allPermissionGranted()) {
-                //openCamera()
 
                 setUpLocationListener()
-            } else {
-
             }
 
         }

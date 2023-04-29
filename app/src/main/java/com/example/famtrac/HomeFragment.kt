@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import java.util.concurrent.ConcurrentNavigableMap
 
 class HomeFragment : Fragment() {
 
@@ -37,6 +38,9 @@ class HomeFragment : Fragment() {
 
         val listContacts = listOf<ContactModel>(
             ContactModel("tarun", 9668273828),
+            ContactModel("Kaushik", 8130012673),
+            ContactModel("Pragaya",955732846),
+            ContactModel("Sharma",7338333963)
 
 
         )
