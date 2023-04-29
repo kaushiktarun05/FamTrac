@@ -12,7 +12,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class MainActivity : AppCompatActivity() {
 
     val permissions = arrayOf(
-        Manifest.permission.ACCESS_FINE_LOCATION
+        Manifest.permission.ACCESS_FINE_LOCATION,
+        Manifest.permission.READ_CONTACTS
     )
     val permissionCode = 69
 
@@ -47,6 +48,7 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
 
     private fun askForPermission() {
         ActivityCompat.requestPermissions(this, permissions, permissionCode)
