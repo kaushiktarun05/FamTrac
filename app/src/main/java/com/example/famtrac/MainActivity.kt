@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
                     inflatefragment(ProfileFragment.newInstance())
                 }
                 R.id.nav_dashboard -> {
-                    inflatefragment(DashboardFragment.newInstance())
+                    inflatefragment(MapsFragment())
                 }
             }
             
