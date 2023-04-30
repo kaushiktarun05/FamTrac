@@ -9,7 +9,7 @@
         android:id="@+id/img_usr"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:src="@drawable/ic_profilephoto"
+        android:src="@drawable/ic_user_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="Aryan"
+        android:text="Lokesh"
         android:textColor="@color/darker_gray"
         android:textSize="@dimen/dimen_16_sp"
         app:layout_constraintEnd_toEndOf="@id/img_usr"

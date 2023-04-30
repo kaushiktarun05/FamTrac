@@ -1,22 +1,24 @@
 package com.example.famtrac
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.provider.ContactsContract
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import java.util.concurrent.ConcurrentNavigableMap
+
 
 class HomeFragment : Fragment() {
+
+    lateinit var inviteAdapter : InviteAdapter
 
     private val listContacts:ArrayList<ContactModel> = ArrayList()
 
@@ -27,8 +29,6 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
-
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -45,21 +45,49 @@ class HomeFragment : Fragment() {
         val recycler = requireView().findViewById<RecyclerView>(R.id.recycler_member)
         recycler.layoutManager = LinearLayoutManager(requireContext())
         recycler.adapter = adapter
-        val inviteAdapter = InviteAdapter(listContacts)
+
+
+    }
+
+
+
+        inviteAdapter = InviteAdapter(listContacts)
+
+        fun fetchDatabaseContacts() {
+            val database = MyFamilyDatabase.getDatabase(requireContext())
+             database.contactDao().getAllContacts().observe(viewLifecycleOwner){
+                 listContacts.clear()
+                 listContacts.addAll(it)
+
+                 inviteAdapter.notifyDataSetChanged()
+             }
+        }
+
+        suspend fun insertDatabaseContacts(listContacts: ArrayList<ContactModel>) {
+
+            val database = MyFamilyDatabase.getDatabase(requireContext())
+
+            database.contactDao().insertAll(listContacts)
+
+        }
+
+        inviteAdapter = InviteAdapter(listContacts)
+        fetchDatabaseContacts()
+
+        var inviteAdapter = InviteAdapter(listContacts)
         CoroutineScope(Dispatchers.IO).launch{
 
-            listContacts.addAll(fetchContacts())
 
-            withContext(Dispatchers.Main) {
-                inviteAdapter.notifyDataSetChanged()
-            }
+            insertDatabaseContacts(fetchContacts())
         }
 
         val inviteRecycler = requireView().findViewById<RecyclerView>(R.id.recycler_invite)
         inviteRecycler.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
         inviteRecycler.adapter = inviteAdapter
+        inviteAdapter = InviteAdapter(listContacts)
 
     }
+
 
 
 

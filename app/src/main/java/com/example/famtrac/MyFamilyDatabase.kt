@@ -1,7 +1,5 @@
 package com.example.famtrac
 
-package com.d4d5.myfamily
-
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
