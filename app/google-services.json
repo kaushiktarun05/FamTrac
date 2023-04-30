@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "789942406747",
+    "project_id": "famtrac",
+    "storage_bucket": "famtrac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:789942406747:android:7dcc1e8ed2ed6ae797b97e",
+        "android_client_info": {
+          "package_name": "com.example.famtrac"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "789942406747-5so7mob7r009l1g14f07adn9su70tb3g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.famtrac",
+            "certificate_hash": "ad94f9bc11fefdd7dae919e32e390756d9deb92d"
+          }
+        },
+        {
+          "client_id": "789942406747-d7k9cl6q83h539f3mdpko5gc9ll7t1pq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-6z4QCYL4JnnE7lqLc09kcmJllfk14RA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "789942406747-d7k9cl6q83h539f3mdpko5gc9ll7t1pq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
