@@ -13,9 +13,6 @@ Some of the key features of FamTrac include:
 - Option to **share location with specific family members only**
 - **Secure and private** - all data is encrypted and password protected
 
-## Installation
-
-FamTrac is available for download on the link provided. To install FamTrac, simply download the app and follow the installation instructions. Once installed, create an account and add your family members to start tracking their locations.
 
 ## Usage
 
