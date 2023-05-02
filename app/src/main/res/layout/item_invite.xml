@@ -9,7 +9,7 @@
         android:id="@+id/img_usr"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:src="@drawable/ic_user_color"
+        android:src="@drawable/ic_profilephoto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

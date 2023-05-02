@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/dimen_8"
         android:text="Accept"
-        android:textColor="@color/dark_green"
+        android:textColor="#013220"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/mail"
         app:layout_constraintEnd_toStartOf="@id/deny"

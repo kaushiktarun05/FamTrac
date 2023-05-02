@@ -1,8 +1,10 @@
-package com.d4d5.myfamily
+package com.example.famtrac
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
+import com.d4d5.myfamily.PrefConstants
+import com.d4d5.myfamily.SharedPref
 
 
 class SplashScreen : AppCompatActivity() {

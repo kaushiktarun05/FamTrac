@@ -1,5 +1,6 @@
 package com.example.famtrac
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.provider.ContactsContract
 import android.util.Log
@@ -10,6 +11,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.d4d5.myfamily.ContactModel
+import com.d4d5.myfamily.InviteAdapter
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -18,7 +21,7 @@ import kotlinx.coroutines.withContext
 
 class HomeFragment : Fragment() {
 
-    lateinit var inviteAdapter : InviteAdapter
+    private lateinit var inviteAdapter : InviteAdapter
 
     private val listContacts:ArrayList<ContactModel> = ArrayList()
 
@@ -144,8 +147,12 @@ class HomeFragment : Fragment() {
 
     }
 
+fun requireActivity(): Any {
+    TODO("Not yet implemented")
+}
 
-    companion object {
+
+companion object {
 
         @JvmStatic
         fun newInstance() = HomeFragment()
