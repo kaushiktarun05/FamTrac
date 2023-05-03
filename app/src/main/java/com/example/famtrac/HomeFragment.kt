@@ -35,6 +35,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val listMembers = listOf(
+            
             MemberModel("Tarun", "C-211 Noida", "79", "223M"),
             MemberModel("kaushik", "Sector 3, Rohini, Delhi", "82", "42KM"),
             MemberModel("NFSU","NFSU, DC,New Delhi","88","21.81KM"),
@@ -55,6 +56,7 @@ class HomeFragment : Fragment() {
         inviteAdapter = InviteAdapter(listContacts)
 
         fun fetchDatabaseContacts() {
+            
             val database = MyFamilyDatabase.getDatabase(requireContext())
              database.contactDao().getAllContacts().observe(viewLifecycleOwner){
                  listContacts.clear()
