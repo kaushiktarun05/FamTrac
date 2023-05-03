@@ -1,12 +1,12 @@
-package com.d4d5.myfamily
+package com.example.famtrac
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.annotation.NonNull
 import androidx.recyclerview.widget.RecyclerView
-import com.d4d5.myfamily.databinding.ItemInviteBinding
-import com.d4d5.myfamily.databinding.ItemInviteMailBinding
+import com.example.famtrac.databinding.ItemInviteBinding
+import com.example.famtrac.databinding.ItemInviteMailBinding
 
 class InviteMailAdapter(
     private val listInvites: List<String>,
