@@ -12,6 +12,7 @@ class InviteAdapter(private val listContacts: List<ContactModel>) :
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): InviteAdapter.ViewHolder {
+        
         val inflater = LayoutInflater.from(parent.context)
         val item = ItemInviteBinding.inflate(inflater, parent, false)
         return ViewHolder(item)
