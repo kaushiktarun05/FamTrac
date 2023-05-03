@@ -1,8 +1,7 @@
-package com.d4d5.myfamily
-
+package com.example.famtrac
 import android.app.Application
 
-class MyFamilyApplication:Application() {
+class FamTracApplication:Application() {
 
     override fun onCreate() {
         super.onCreate()
