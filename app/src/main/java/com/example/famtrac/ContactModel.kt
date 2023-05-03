@@ -1,4 +1,4 @@
-package com.d4d5.myfamily
+package com.example.famtrac
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
