@@ -9,8 +9,10 @@ import com.example.famtrac.databinding.ItemInviteBinding
 import com.example.famtrac.databinding.ItemInviteMailBinding
 
 class InviteMailAdapter(
+    
     private val listInvites: List<String>,
     private val onActionClick: OnActionClick
+    
 ) :
     RecyclerView.Adapter<InviteMailAdapter.ViewHolder>() {
 
