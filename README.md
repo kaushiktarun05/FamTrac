@@ -1,4 +1,4 @@
-# FamTrac
+# The FamTrac App
 
 **FamTrac** is a family tracking app that allows users to keep track of the real-time location of their family members. The app is designed to help users stay connected with their loved ones and ensure their safety.
 
