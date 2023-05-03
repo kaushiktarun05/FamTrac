@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.annotation.NonNull
 import androidx.recyclerview.widget.RecyclerView
-import com.d4d5.myfamily.databinding.ItemInviteBinding
+import com.example.famtrac.databinding.ItemInviteBinding
 
 class InviteAdapter(private val listContacts: List<ContactModel>) :
     RecyclerView.Adapter<InviteAdapter.ViewHolder>() {
