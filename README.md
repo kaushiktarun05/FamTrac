@@ -25,3 +25,7 @@ If you encounter any issues or have questions about FamTrac, please contact our 
 ## Feedback
 
 At FamTrac, we're always looking for ways to improve the app and make it more useful for our users. If you have any **feedback** or **suggestions**, please let us know at kaushiktarun2003@gmail.com. We value your input and are committed to making FamTrac the best family tracking app available.
+
+## Languages and frameworks used for development
+
+Kotlin, Firebase, Firestore, Google Maps API
