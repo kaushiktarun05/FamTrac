@@ -16,7 +16,7 @@ Some of the key features of FamTrac include:
 
 ## Usage
 
-To use FamTrac, log in to your account and select the family member you want to track. You can view their real-time location on a map and set up customized location alerts. The app also provides detailed location history for each family member. FamTrac's user-friendly interface makes it easy to add and manage family members.
+To use FamTrac, log in to your account and select the family member you want to track. You can view their real-time location on a map and set up customized location alerts. The app also provides detailed location history for each family member. FamTrac's user-friendly interface makes it easy to add and manage family members. We will soon be uploading the app to playstore.
 
 ## Support
 
